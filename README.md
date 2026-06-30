@@ -1,5 +1,5 @@
-# Classificador Automático de NCM
-Automação desenvolvida para reduzir o tempo de classificação fiscal de produtos utilizando regras de NCM e integração com APIs REST. O fluxo processa listas em lote, realiza consultas automáticas, aplica regras de classificação e registra os resultados em uma planilha do Google Sheets.
+# Classificador Fiscal de NCM
+A classificação fiscal de produtos é uma etapa essencial para a correta tributação e, quando realizada manualmente em grandes volumes, pode consumir horas de trabalho. Este projeto automatiza esse processo utilizando regras de classificação, integração com APIs REST e processamento em lote, reduzindo significativamente o tempo necessário para análise inicial dos códigos NCM.
 
 ## 🚀 Tecnologias
 
@@ -14,7 +14,7 @@ Automação desenvolvida para reduzir o tempo de classificação fiscal de produ
 ## ✨ Principais funcionalidades
 
 - Processamento em lote de aproximadamente 750 códigos NCM
-- Consulta automática 
+- Consulta automática às regras de classificação
 - Aplicação de regras de classificação fiscal
 - Tratamento e normalização das respostas
 - Registro automático dos resultados no Google Sheets
@@ -30,11 +30,15 @@ Automação desenvolvida para reduzir o tempo de classificação fiscal de produ
 ## Como funciona
 
 1. Recebe uma lista de NCMs de produtos em uma planilha do Google Sheets.
-2. Consulta uma planilha com regras de classificação.
+2. Consulta automaticamente uma base de regras de classificação fiscal.
 3. Processa a resposta.
-4. Retorna possíveis classificações (o mesmo NCM pode ter mais de uma classificação dependendo da finalidade).
+4. Identifica possíveis enquadramentos conforme as regras disponíveis.
 5. Grava os resultados em uma planilha.
 6. A última validação deve ser feita pelo contador.
+
+## 📈 Resultado
+
+A automação permitiu transformar um processo repetitivo de classificação fiscal em um fluxo automatizado capaz de processar centenas de registros em lote, reduzindo intervenção manual e organizando os resultados diretamente em uma planilha para validação final.
 
 
 ## Demonstração
@@ -65,6 +69,6 @@ Automação desenvolvida para reduzir o tempo de classificação fiscal de produ
 
 ## Observação
 
-O fluxo do n8n não foi disponibilizado publicamente por conter regras de negócio específicas. Entretanto, o funcionamento da solução é demonstrado pelas imagens e pela documentação deste projeto.
+O fluxo desenvolvido em n8n não foi disponibilizado publicamente por conter regras de negócio e lógica de automação específicas do projeto.
 
 
